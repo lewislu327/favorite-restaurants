@@ -17,4 +17,5 @@ db.once('open', () => {
   for (let i = 0; i < restaurantList.results.length; i++) {
     Restaurant.create(restaurantList.results[i])
   }
+  console.log('seeder loaded')
 })

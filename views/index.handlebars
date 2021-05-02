@@ -15,7 +15,7 @@
     </div>
   </div>
 </div>
-<a href="./restaurant/new">Create</a>
+
 
 <!-- restaurant list -->
 <div class="container mt-5">
@@ -38,6 +38,11 @@
                 {{this.rating}}
                 <i class="fas fa-star fa-xs"></i>
               </span>
+              <a href="./detail/{{ this._id }}">detail</a>
+              <a href="./restaurant/{{ this._id }}/edit">edit</a>
+              <form action="./restaurant/{{ this._id }}/delete" method="POST" style="display: inline;">
+                <button type="submit">delete</button>
+              </form>
             </div>
           </div>
         </a>
