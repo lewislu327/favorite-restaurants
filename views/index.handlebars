@@ -24,7 +24,7 @@
     <div class="col-sm-4">
       <div class="card-columns">
 
-        <a href="/restaurants/{{this.id}}" class="text-secondary">
+        <a href="./detail/{{ this._id }}" class="text-secondary" style="text-decoration:none;">
           <div class="card mb-3">
             <img class="card-img-top" src="{{this.image}}" alt="{{this.name}}">
             <div class="card-body p-3">
@@ -38,10 +38,18 @@
                 {{this.rating}}
                 <i class="fas fa-star fa-xs"></i>
               </span>
-              <a href="./detail/{{ this._id }}">detail</a>
-              <a href="./restaurant/{{ this._id }}/edit">edit</a>
+
+              <a href="./detail/{{ this._id }}" style="text-decoration:none;">
+                <button type="button" class="btn btn-warning">
+                  <i class="fas fa-info-circle"></i>
+                </button>
+              </a>
+              <a href="./restaurant/{{ this._id }}/edit" style="text-decoration:none;">
+                <button type="button" class="btn btn-info"><i class="fas fa-edit"></i></button>
+              </a>
               <form action="./restaurant/{{ this._id }}/delete" method="POST" style="display: inline;">
-                <button type="submit">delete</button>
+                <button type="button submit" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+
               </form>
             </div>
           </div>

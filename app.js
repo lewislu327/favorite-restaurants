@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
   Restaurant.find()
     .lean()
     .then(restaurant => res.render('index', { restaurant: restaurant }))
-    .catch(error => console.eroor(error))
+    .catch(error => console.error(error))
 })
 // route for new restaurant
 app.get('/restaurant/new', (req, res) => {
@@ -96,6 +96,15 @@ app.post('/restaurant/:id/delete', (req, res) => {
     .then(restaurant => restaurant.remove())
     .then(() => res.redirect('/'))
     .catch(error => console.log(error))
+})
+
+// route for search page
+app.get('/search', (req, res) => {
+  const keyword = req.query.keyword;
+  return Restaurant.find({name:{$regex:keyword,$options:"$i"}})
+  .lean()
+  .then(restaurant => res.render('index', { restaurant: restaurant })) //insensitive search  
+  .catch(error => console.error(error))
 })
 
 // app local route
