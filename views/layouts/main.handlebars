@@ -30,6 +30,14 @@
   <!-- partial templates will replace the part of "body" here -->
   {{{ body }}}
 
+  // replace with space, \s means "match whitespace" and the g is a flag which means "global"
+
+  <script>
+    function myFunction(id) {
+      let x = document.getElementById(id);
+      x.value = x.value.replace(/\s+/g, '');
+    }
+  </script>
   <!-- include javascript files here -->
   <script src="/javascripts/jquery-3.3.1.js"></script>
   <script src="/javascripts/popper.js"></script>
