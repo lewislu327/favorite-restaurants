@@ -21,7 +21,7 @@
           width="30" height="30" class="d-inline-block align-top" alt="我的餐廳清單">
         我的餐廳清單
       </a>
-      <a href="./restaurant/new"><i class="fas fa-plus-square fa-lg">新增餐廳</i></a>
+      <a href="/restaurants/new"><i class="fas fa-plus-square fa-lg">新增餐廳</i></a>
     </div>
   </nav>
 
@@ -30,14 +30,6 @@
   <!-- partial templates will replace the part of "body" here -->
   {{{ body }}}
 
-  // replace with space, \s means "match whitespace" and the g is a flag which means "global"
-
-  <script>
-    function myFunction(id) {
-      let x = document.getElementById(id);
-      x.value = x.value.replace(/\s+/g, '');
-    }
-  </script>
   <!-- include javascript files here -->
   <script src="/javascripts/jquery-3.3.1.js"></script>
   <script src="/javascripts/popper.js"></script>

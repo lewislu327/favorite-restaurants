@@ -1,4 +1,5 @@
 <!-- search bar -->
+
 <div class="container search-bar">
   <div class="search-bar-outer">
     <div class="search-bar-inner">
@@ -9,10 +10,25 @@
             value="{{keyword}}" aria-describedby="search-button">
           <div class="input-group-append">
             <button class="btn btn-major" type="submit" id="search-button"><i class="fas fa-search"></i></button>
+
           </div>
+
         </div>
+
       </form>
     </div>
+  </div>
+  <div class="dropdown">
+    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+      aria-expanded="false">
+      Sort
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" href="/sort/ascending">A -> Z </a></li>
+      <li><a class="dropdown-item" href="/sort/descending">Z -> A</a></li>
+      <li><a class="dropdown-item" href="/sort/category">Category</a></li>
+      <li><a class="dropdown-item" href="/sort/region">Region</a></li>
+    </ul>
   </div>
 </div>
 
@@ -24,7 +40,7 @@
     <div class="col-sm-4">
       <div class="card-columns">
 
-        <a href="./detail/{{ this._id }}" class="text-secondary" style="text-decoration:none;">
+        <a href="/restaurants/{{ this._id }}" class="text-secondary" style="text-decoration:none;">
           <div class="card mb-3">
             <img class="card-img-top" src="{{this.image}}" alt="{{this.name}}">
             <div class="card-body p-3">
@@ -39,15 +55,15 @@
                 <i class="fas fa-star fa-xs"></i>
               </span>
 
-              <a href="./detail/{{ this._id }}" style="text-decoration:none;">
+              <a href="/restaurants/{{ this._id }}" style="text-decoration:none;">
                 <button type="button" class="btn btn-warning">
                   <i class="fas fa-info-circle"></i>
                 </button>
               </a>
-              <a href="./restaurant/{{ this._id }}/edit" style="text-decoration:none;">
+              <a href="/restaurants/{{ this._id }}/edit" style="text-decoration:none;">
                 <button type="button" class="btn btn-info"><i class="fas fa-edit"></i></button>
               </a>
-              <form action="./restaurant/{{ this._id }}/delete" method="POST" style="display: inline;">
+              <form action="/restaurants/{{ this._id }}?_method=DELETE" method="POST" style="display: inline;">
                 <button type="button submit" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
 
               </form>

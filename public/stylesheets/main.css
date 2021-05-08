@@ -10,21 +10,30 @@
   position: relative;
   z-index: -1;
   margin: -5px;
-  height: 360px;
+  height: 250px;
   background: #dddddd center center
     url("https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5720/restaurants-list-cover.jpg");
   background-size: cover;
   filter: blur(3px);
 }
 
+.search-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.dropdown {
+  margin: -150px 0 30px 0;
+}
+
 .search-bar .search-bar-outer {
-  margin: 0 auto;
-  max-width: 680px;
+  margin: -150px 0 30px 0;
+  max-width: 100%;
   background-color: #fce2cf;
   border-radius: 8px;
   padding: 20px 30px;
   border: 0;
-  margin-top: -300px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
