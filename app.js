@@ -7,6 +7,7 @@ const session = require('express-session')
 const port = 3000
 const routes = require('./routes')
 require('./config/mongoose')
+const usePassport = require('./config/passport')
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
@@ -22,6 +23,7 @@ app.use(session({
 }))
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
+usePassport(app)
 app.use(routes)
 
 // app local route
