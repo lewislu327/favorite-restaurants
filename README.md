@@ -4,9 +4,18 @@ A simple web application for collecting favorite restaurants
 
 # Project Running Environment
 
-Node.js: 4.17.1  
+Express: 4.17.1  
 Express-handlebars 5.3.0  
-MongoDB: 4.2.13
+MongoDB: 4.2.13  
+bcryptjs: 2.4.3  
+connect-flash: 0.1.1  
+dotenv: 10.0.0  
+express-session: 1.17.2  
+method-override: 3.0.0  
+mongoose: 5.12  
+passport: 0.4.1  
+passport-facebook: 3.0.0  
+passport-local: 1.0.0
 
 ## Installation
 
@@ -43,12 +52,15 @@ MongoDB: 4.2.13
 6. If terminal shows below content means it's working
 
 ```
-   Express is listening on http://localhost:3000
+   App is running on http://localhost:3000
 ```
 
 ## Features
 
-- listing favorite restaurants from MangoDB
+- Can register account to use the app
+- Can Log in through Facebook account
+- Hashing algorithms when saving password
+- Save favorite restaurants into MangoDB
 - Create your favorite restaurant
 - Searching restaurants by name
 - Show restaurant information
