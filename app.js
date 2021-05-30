@@ -1,10 +1,13 @@
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+}
 const express = require('express')
 const app = express()
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override') 
 const session = require('express-session')
-const port = 3000
+const port = process.env.PORT
 const routes = require('./routes')
 require('./config/mongoose')
 const usePassport = require('./config/passport')
@@ -15,10 +18,9 @@ app.set('view engine', 'handlebars')
 
 // setting static files
 app.use(express.static('public'))
-const restaurantList = require('./restaurant.json').results
 
 app.use(session({
-  secret: 'someRandomStuffs',
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true
 }))
