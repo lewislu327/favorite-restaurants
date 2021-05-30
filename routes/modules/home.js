@@ -3,7 +3,8 @@ const router = express.Router()
 const Restaurant = require('../../models/restaurant')
 // route for home page 
 router.get('/', (req, res) => {
-  Restaurant.find()
+  const userId = req.user._id;
+  Restaurant.find({ userId })
     .lean()
     .sort({ name: 'asc'})
     .then(restaurant => res.render('index', { restaurant: restaurant }))
