@@ -3,30 +3,31 @@
     <div class="create-form">
       <form action="/restaurants/new" method="POST">
         <div class="form-row justify-content-center">
+          {{> message}}
           <div class="form-group col-md-6">
             <label for="name">Restaurant Name</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="餐廳名稱">
+            <input type="text" class="form-control" value="{{name}}" id="name" name="name" placeholder="餐廳名稱">
           </div>
           <div class="form-group col-md-4 ml-2">
             <label for="category">Category</label>
             <select id="category" class="form-control" name="category">
               <option>選擇餐廳類型</option>
-              <option>美式餐廳</option>
-              <option>日本料理</option>
-              <option>義式餐廳</option>
-              <option>中式餐廳</option>
-              <option>泰式料理</option>
-              <option>中東料理</option>
-              <option>異國風味</option>
-              <option>吃到飽</option>
-              <option>早午餐</option>
-              <option>咖啡</option>
-              <option>酒吧</option>
+              <option {{#is category '美式餐廳'}}selected {{/is}}>美式餐廳</option>
+              <option {{#is category '日本料理'}}selected {{/is}}>日本料理</option>
+              <option {{#is category '義式餐廳'}}selected {{/is}}>義式餐廳</option>
+              <option {{#is category '中式餐廳'}}selected {{/is}}>中式餐廳</option>
+              <option {{#is category '泰式料理'}}selected {{/is}}>泰式料理</option>
+              <option {{#is category '中東料理'}}selected {{/is}}>中東料理</option>
+              <option {{#is category '異國風味'}}selected {{/is}}>異國風味</option>
+              <option {{#is category '吃到飽'}}selected {{/is}}>吃到飽</option>
+              <option {{#is category '早午餐'}}selected {{/is}}>早午餐</option>
+              <option {{#is category '咖啡'}}selected {{/is}}>咖啡</option>
+              <option {{#is category '酒吧'}}selected {{/is}}>酒吧</option>
             </select>
           </div>
           <div class="form-group col-10">
             <label for="address">Address</label>
-            <input type="text" class="form-control" id="address" name="location" placeholder="餐廳地址">
+            <input type="text" class="form-control" value="{{address}}" id="address" name="location" placeholder="餐廳地址">
           </div>
           <div class="form-group col-md-6">
             <label for="phone">Phone</label>
