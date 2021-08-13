@@ -12,7 +12,7 @@
   margin: -5px;
   height: 250px;
   background: #dddddd center center
-    url("https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5720/restaurants-list-cover.jpg");
+    url('https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5720/restaurants-list-cover.jpg');
   background-size: cover;
   filter: blur(3px);
 }
@@ -23,8 +23,8 @@
   align-items: center;
 }
 
-.dropdown {
-  margin: -150px 0 30px 0;
+.sorting {
+  margin: -110px 0 30px 0;
 }
 
 .createBtn {
