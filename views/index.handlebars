@@ -23,7 +23,7 @@
   
   <form action="/sort" method="GET">
   <div class="sorting">
-    <select class="form-control btn-success" onchange="this.form.submit()" name="sort" id="sort">
+    <select class="form-select btn-success" onchange="this.form.submit()" name="sort" id="sort">
       <option value="" selected>Sort</option>
       <option value="name" {{#is sort 'name'}}selected {{/is}}>A -> Z</option>
       <option value="-name" {{#is sort '-name'}}selected {{/is}}>Z -> A</option>

@@ -1,72 +1,77 @@
 # My Favorite Restaurants
 
-A simple web application for collecting favorite restaurants
+#### A simple web application build from Node.js & Express
+
+[<img align="center" src="" height="400" width="800" />]()
+
+##### Example User Information
+
+| Email             | Password |
+| ----------------- | :------: |
+| user1@example.com | 12345678 |
+
+[網站連結](https://limitless-gorge-48029.herokuapp.com/)
+
+## Main Feature
+
+- New user can register account to use the app
+- User can Log in through Facebook account
+- Hashing algorithms when saving password
+- Save favorite restaurants into MangoDB
+- Create your favorite restaurant
+- Searching restaurants by name & categories
+- Show detail information of restaurant
+- Edit restaurant information
+- Delete restaurant information
 
 # Project Running Environment
 
-Express: 4.17.1  
-Express-handlebars 5.3.0  
-MongoDB: 4.2.13  
-bcryptjs: 2.4.3  
-connect-flash: 0.1.1  
-dotenv: 10.0.0  
-express-session: 1.17.2  
-method-override: 3.0.0  
-mongoose: 5.12  
-passport: 0.4.1  
-passport-facebook: 3.0.0  
-passport-local: 1.0.0
+- Node.js: v14.17.4,
+- Express: v4.17.1,
+- Express-handlebars v5.3.0,
+- MongoDB: 4.2.13
+- bcryptjs: 2.4.3
+- connect-flash: 0.1.1
+- dotenv: 10.0.0
+- express-session: 1.17.2
+- method-override: 3.0.0
+- mongoose: 5.12
+- passport: 0.4.1
+- passport-facebook: 3.0.0
+- passport-local: 1.0.0
 
-## Installation
+## Installation & Execution
 
-1. clone this project
-
-```
-   $ git clone https://github.com/lewislu327/favorite_restaurants_imporved.git
-```
-
-2. Install npm Express
+1. Clone this project into you folder
 
 ```
-   $ npm i express
+   $ git clone https://github.com/lewislu327/favorite-restaurants
 ```
 
-3. cd to project folder
+2. cd to project folder
 
 ```
-   cd favorite_restaurants_improved
+   cd simple-twitter-api-2021
 ```
 
-4. Require seeder
+3. Install npm necessary libraries
 
 ```
-   $ npm run seed
+   $ npm install
 ```
 
-5. Run this app
+4. Run this app
 
 ```
    $ npm run dev
 ```
 
-6. If terminal shows below content means it's working
+5. If terminal shows below content means it's working
 
 ```
-   App is running on http://localhost:3000
+   Express is listening on http://localhost:3000
 ```
 
-## Features
-
-- Can register account to use the app
-- Can Log in through Facebook account
-- Hashing algorithms when saving password
-- Save favorite restaurants into MangoDB
-- Create your favorite restaurant
-- Searching restaurants by name
-- Show restaurant information
-- Edit restaurant information
-- Delete restaurant information
-
-## Author
+## Contributor
 
 Lewis Lu
