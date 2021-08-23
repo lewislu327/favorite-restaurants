@@ -2,7 +2,7 @@
 
 #### A simple web application build from Node.js & Express
 
-[<img align="center" src="" height="400" width="800" />]()
+[<img align="center" src="https://github.com/lewislu327/favorite-restaurants/blob/master/public/images/homepage.png" height="400" width="800" />]()
 
 ##### Example User Information
 
